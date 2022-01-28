@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: no-repeat linear-gradient(239deg, #4285f3, #5ccfff);
+    height: 100vh;
+    font: bold 2rem 'Montserrat', sans-serif;
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo__title {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 3rem;
+    color: white;
+}
+
+.todo__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.todo__item{
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+.todo__item > div {
+    width: 80%;
+}
+.todo__item:hover {
+    cursor: pointer;
+    /* transition: all .5s ease; */
+    background-color: rgba(0, 0, 0, 0.062);
+}
+
+.todo__item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo__item > input[type='button'],
+.todo__item > input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    font: inherit;
+}
+
+.btnDelete {
+    color: red;
+    border: none;
+    background: transparent;
+}
+
+#clearAll {
+    border: none;
+    background: transparent;
+}
+
+.todo__item > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+    opacity: 0.4;
+}
+
+.todo__new-item{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    margin: 10px;
+    font: inherit;
+}
+
+.todo__new-item > input{
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.todo__new-item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
+
+#footer {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: -27px;
+}
+#clearAll {
+    position: relative;
+    right: -90rem;
+    font-size: 1.5rem;
+}
+#clearAll:hover {
+    background-color: rgba(0, 0, 0, 0.062);
+    cursor: pointer;
+}
